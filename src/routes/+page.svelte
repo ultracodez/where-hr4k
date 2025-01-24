@@ -67,9 +67,10 @@
             "https://birch.catenarymaps.org/get_realtime_locations/metro~losangeles/metro/0/0",
         );
         const data = await response.json();
-        const hr4ktrip: any = Object.values(data.vehicle_positions).find((trip: any) => (trip.vehicle.id.startsWith("40") && trip.vehicle.id.length > 4));
-        console.log(hr4ktrip);
-        if (hr4ktrip) {
+        const hr4ktrips: any = Object.values(data.vehicle_positions).filter((trip: any) => (trip && trip.vehicle && trip.vehicle.id && trip.vehicle.id.startsWith("40") && trip.vehicle.id.length > 4));
+        console.log(hr4ktrips);
+        if (hr4ktrips.length > 0) {
+            const hr4ktrip = hr4ktrips[0]
             isRunning = true;
             details = `HR4000 set ${hr4ktrip.vehicle.id} is running on the ${hr4ktrip.trip.trip_headsign.replace(' - ', ' to ').replace(' Station', '').replace(' Union', ' Union Station')}.`;
             // @ts-ignore
