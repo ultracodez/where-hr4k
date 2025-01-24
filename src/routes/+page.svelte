@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+
     // https://birch.catenarymaps.org/get_realtime_locations/metro~losangeles/metro/0/0
 
     let isRunning: boolean | null = null;
@@ -75,7 +77,9 @@
         }
     }
 
+    onMount(() => {
     fetchIsRunning();
+    });
 </script>
 
 <div class="wrap">
