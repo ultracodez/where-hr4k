@@ -72,6 +72,8 @@
             details = `HR4000 set ${hr4ktrip.vehicle.id} is running on the ${hr4ktrip.trip.trip_headsign.replace(' - ', ' to ').replace(' Station', '').replace(' Union', ' Union Station')}.`;
             // @ts-ignore
             next = `> ${indices[hr4ktrip.trip.trip_headsign][hr4ktrip.current_stop_sequence]} is next`;
+        } else {
+            isRunning = false;
         }
     }
 
