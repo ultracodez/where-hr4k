@@ -9,7 +9,7 @@
     let details: string = "";
     let next: string = "";
     let singleTrainTimes: Array<any>= [];
-    
+    const isDev = true;
 
     let indices = {
         'Metro D Line - Wilshire / Western Station': [
@@ -73,7 +73,7 @@
             "https://birch.catenarymaps.org/get_realtime_locations/metro~losangeles/metro/0/0",
         );
         const data = await response.json();
-        const hr4ktrips: any = Object.values(data.vehicle_positions).filter((trip: any) => (trip && trip.vehicle && trip.vehicle.id && trip.vehicle.id.startsWith("40") && trip.vehicle.id.length > 4));
+        const hr4ktrips: any = Object.values(data.vehicle_positions).filter((trip: any) => (trip && trip.vehicle && trip.vehicle.id && trip.vehicle.id.startsWith(isDev ? "5" : "40") && trip.vehicle.id.length > 4));
         console.log(hr4ktrips);
         if (hr4ktrips.length > 0) {
             // extra train-specific data collection
