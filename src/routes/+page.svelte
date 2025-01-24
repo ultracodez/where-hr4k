@@ -1,4 +1,6 @@
 <script lang="ts">
+    import "../app.css";
+
     import { onMount } from 'svelte';
 
     // https://birch.catenarymaps.org/get_realtime_locations/metro~losangeles/metro/0/0
@@ -7,6 +9,7 @@
     let details: string = "";
     let next: string = "";
     let singleTrainTimes: Array<any>= [];
+    
 
     let indices = {
         'Metro D Line - Wilshire / Western Station': [
@@ -133,7 +136,7 @@
         <br/>
         
         {/if}
-        <div style="font-size: 1.25rem;color:white;">Built by <a href="https://samuelsharp.com" style="font-size: 1.25rem;color:white;">Samuel Sharp (@42A7C5)</a> and  <a href="https://github.com/ultracodez" style="font-size: 1.25rem;color:white;">Eduardo Maroto (@ultracodez)</a></div>
+        <div style="font-size: 1.25rem;color:white;">Built by <a class="underline" href="https://samuelsharp.com" style="font-size: 1.25rem;color:white;">Samuel Sharp (@42A7C5)</a> and  <a class="underline" href="https://github.com/ultracodez" style="font-size: 1.25rem;color:white;">Eduardo Maroto (@ultracodez)</a></div>
     </div>
 </div>
 
