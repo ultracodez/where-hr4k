@@ -130,9 +130,10 @@
 		       {singleTrainTime.name} @ {singleTrainTime.time}
 	        </div>
         {/each}
-                {/if}
         <br/>
-        <a href="https://samuelsharp.com" style="font-size: 1.25rem;color:white;">Built by Samuel Sharp (@42A7C5)</a>
+        
+        {/if}
+        <div style="font-size: 1.25rem;color:white;">Built by <a href="https://samuelsharp.com" style="font-size: 1.25rem;color:white;">Samuel Sharp (@42A7C5)</a> and  <a href="https://github.com/ultracodez" style="font-size: 1.25rem;color:white;">Eduardo Maroto (@ultracodez)</a></div>
     </div>
 </div>
 
