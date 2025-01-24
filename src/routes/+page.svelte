@@ -9,7 +9,7 @@
   let details: string = "";
   let next: string = "";
   let singleTrainTimes: Array<any> = [];
-  const isDev = true;
+  const isDev = false;
 
   let indices = {
     "Metro D Line - Wilshire / Western Station": [
