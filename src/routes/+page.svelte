@@ -128,7 +128,7 @@
 </script>
 
 <div class="h-screen flex px-10 lg:px-0">
-  <div class="mx-auto text-center pt-32 md:pt-96">
+  <div class="mx-auto text-center pt-32 md:pt-32">
     <h1 class="text-2xl md:text-4xl">Is the <b>HR4000</b> running now?</h1>
     {#if isRunning == true}
       <h2 class="text-4xl md:text-6xl pt-6">Yes!</h2>
